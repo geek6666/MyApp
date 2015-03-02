@@ -11,6 +11,8 @@ public class MyActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
+        if (!io.vov.vitamio.LibsChecker.checkVitamioLibs(this))
+            return;
 
         //获取默认的SP
 //        PreferenceManager.getDefaultSharedPreferences(this);
