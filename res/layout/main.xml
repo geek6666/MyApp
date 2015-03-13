@@ -3,6 +3,7 @@
               android:layout_width="fill_parent"
               android:layout_height="fill_parent"
               android:orientation="vertical"
+              android:background="#ffffff"
     >
 
     <!--<SurfaceView
@@ -10,10 +11,55 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         />-->
-    <VideoView
+    <!--<VideoView
         android:id="@+id/video_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"/>-->
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="button"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="这事一片测试的数据请注意啦，不让你看到现骨干的数据"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom"
+            android:text="这事一片测试的数据请注意啦，不让你看到现骨干的数据"/>
+
+        <LinearLayout
+            android:id="@+id/content"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="400dip"
+                android:background="#ff0000"/>
+
+            <TextView
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:background="#88000000"/>
+        </LinearLayout>
+    </FrameLayout>
+
 
 </LinearLayout>
 

@@ -15,13 +15,14 @@ import java.util.List;
 public class MediaUtil {
 
     private static MediaUtil mediaUtil;
+    private static byte[] obj = new byte[0];//最节省内存
 
     private MediaUtil() {
     }
 
     public static MediaUtil newInstance() {
         if (mediaUtil == null) {
-            synchronized (MediaUtil.class) {
+            synchronized (obj) {
                 if (mediaUtil == null) {
                     mediaUtil = new MediaUtil();
                 }
